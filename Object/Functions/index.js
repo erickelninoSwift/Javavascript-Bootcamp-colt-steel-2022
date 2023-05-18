@@ -38,7 +38,7 @@ console.log(data);
 function isValidPassword(username,password)
 {
 
-     if(password.length >= 8)
+     if(password.trim().length >= 8)
      {
         const valid = /\s/.test(password);
         if(!valid)
@@ -65,7 +65,7 @@ function isValidPassword(username,password)
 }
 
 isValidPassword("Erick","#kelnino1");
-isValidPassword("dogluvr","dogluvr123")
+isValidPassword("doKluvr","dogluvr123")
 
 
 
