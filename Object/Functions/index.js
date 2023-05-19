@@ -69,10 +69,50 @@ isValidPassword("doKluvr","dogluvr123")
 
 
 
+// Find average value 
 
 
 
+function averageValue(myArray)
+{
+    const lengthArray = myArray.length;
 
+    console.log(lengthArray);
+
+    const totlaNumbers = myArray.reduce((accu,currentvalue) =>{
+
+        return accu += currentvalue;
+
+    },0);
+
+    return totlaNumbers / lengthArray;
+
+}
+
+
+let dataValues = [10,20,30,40,50];
+
+console.log(averageValue(dataValues));
+
+
+
+// Pangram
+
+
+function Ispangram(stringValue)
+{
+    var regex = /([a-z])(?!.*\1)/gi;
+
+    return (stringValue.match(regex)).length === 26;
+
+}
+
+
+let value = "How are you doing this evening";
+
+
+console.log(Ispangram(value));
+console.log(Ispangram('The five boxing wizards jump quickly'));
 
 
 
