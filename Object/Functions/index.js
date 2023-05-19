@@ -115,10 +115,23 @@ console.log(Ispangram(value));
 console.log(Ispangram('The five boxing wizards jump quickly'));
 
 
+function getCard()
+{
+    let value = [1,2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
 
+    let suites = ['Clubs','Spades','hearts','diamonds'];
 
+    let valuerandom = Math.floor(Math.random() * value.length);
+    let suitesRandom = Math.floor(Math.random() * suites.length);
 
+  return {
+    value: `${value[valuerandom]}`,
+    suit: `${suites[suitesRandom]}`
+  }
 
+}
+
+console.log(getCard());
 
 
 
